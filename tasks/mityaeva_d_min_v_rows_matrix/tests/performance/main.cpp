@@ -28,8 +28,8 @@ TEST_P(ExampleRunPerfTestProcesses, RunPerfModes) {
   ExecuteTest(GetParam());
 }
 
-const auto kAllPerfTasks =
-    ppc::util::MakeAllPerfTasks<InType, MityaevaDTestTaskMPI, MityaevaDTestTaskSEQ>(PPC_SETTINGS_mityaeva_d_min_v_rows_matrix);
+const auto kAllPerfTasks = ppc::util::MakeAllPerfTasks<InType, MityaevaDTestTaskMPI, MityaevaDTestTaskSEQ>(
+    PPC_SETTINGS_mityaeva_d_min_v_rows_matrix);
 
 const auto kGtestValues = ppc::util::TupleToGTestValues(kAllPerfTasks);
 
